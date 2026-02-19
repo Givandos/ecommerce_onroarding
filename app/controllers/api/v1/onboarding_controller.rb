@@ -50,7 +50,7 @@ module Api
 
       def permitted_params
         # Allow any params because we don't have strict requirements yet
-        params.require(:step_params).permit!
+        params.fetch(:step_params, ActionController::Parameters.new).permit!
       end
     end
   end

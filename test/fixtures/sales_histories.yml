@@ -1,0 +1,11 @@
+one:
+  company: one
+  product: one
+  quantity: 100
+  date: 2026-01-15
+
+two:
+  company: two
+  product: two
+  quantity: 50
+  date: 2026-01-20

@@ -1,0 +1,9 @@
+one:
+  name: Main Warehouse
+  location: Berlin
+  company: one
+
+two:
+  name: Secondary Warehouse
+  location: Munich
+  company: two

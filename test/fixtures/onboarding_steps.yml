@@ -1,0 +1,47 @@
+one:
+  name: Welcome
+  slug: welcome
+  position: 1
+  skippable: false
+
+two:
+  name: Lead Time Setup
+  slug: lead_time
+  position: 2
+  skippable: false
+
+three:
+  name: Days of Stock
+  slug: days_of_stock
+  position: 3
+  skippable: false
+
+four:
+  name: Forecasting Configuration
+  slug: forecasting
+  position: 4
+  skippable: false
+
+five:
+  name: PO Upload
+  slug: po_upload
+  position: 5
+  skippable: true
+
+six:
+  name: Suppliers Match
+  slug: suppliers_match
+  position: 6
+  skippable: true
+
+seven:
+  name: Bundles
+  slug: bundles
+  position: 7
+  skippable: true
+
+eight:
+  name: Integrations
+  slug: integrations
+  position: 8
+  skippable: false

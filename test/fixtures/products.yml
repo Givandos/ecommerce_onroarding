@@ -1,0 +1,11 @@
+one:
+  name: Product One
+  sku: SKU001
+  company: one
+  category: one
+
+two:
+  name: Product Two
+  sku: SKU002
+  company: two
+  category: two

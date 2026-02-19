@@ -1,0 +1,11 @@
+one:
+  company: one
+  current_step: one
+  status: 2 # in_progress
+  completed_steps: {}
+
+two:
+  company: two
+  current_step: two
+  status: 2 # in_progress
+  completed_steps: {"welcome": "completed"}

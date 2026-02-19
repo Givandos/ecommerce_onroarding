@@ -1,0 +1,11 @@
+one:
+  company: one
+  default_lead_time: 14
+  days_of_stock: 30
+  forecasting_days: 90
+
+two:
+  company: two
+  default_lead_time: 7
+  days_of_stock: 15
+  forecasting_days: 60

@@ -29,7 +29,7 @@ steps_data.each do |step_data|
     step.position = step_data[:position]
     step.required_sync_type = step_data[:required_sync_type]
     step.required_step_id = OnboardingStep.find_by(slug: step_data[:required_step_slug])&.id if step_data[:required_step_slug].present?
-    step.skippable = step_data[:skippable]
+    step.skippable = step_data[:skippable] if step_data[:skippable].present?
   end
 end
 

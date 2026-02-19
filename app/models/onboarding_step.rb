@@ -3,8 +3,8 @@ class OnboardingStep < ApplicationRecord
 
   validates :name, :slug, :position, presence: true
   validates :slug, uniqueness: true
-  validates :skippable, inclusion: { in: [true, false] }
-  validates :required_sync_type, inclusion: { in: %w[products sales_history warehouses vendors] }
+  validates :skippable, inclusion: { in: [true, false] }, allow_nil: false
+  validates :required_sync_type, inclusion: { in: %w[products sales_history warehouses vendors] }, allow_nil: true
 
   scope :ordered, -> { order(:position) }
 end

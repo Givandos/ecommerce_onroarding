@@ -27,7 +27,7 @@ class UpdateProgressService
     handle_step
     return if @error
 
-    complete_step
+    complete_step unless ActiveModel::Type::Boolean.new.cast(@params[:skip_step]) == true
     move_next
   end
 
@@ -138,7 +138,7 @@ class UpdateProgressService
     if @params[:po_upload_file]
       # Handle POs file upload logic here
       # We can use background jobs for this if we don't want to block the UI
-    elsif @params[:skip_step] == true
+    elsif ActiveModel::Type::Boolean.new.cast(@params[:skip_step]) == true
       if @step.skippable?
         skip_step
       else
@@ -152,7 +152,7 @@ class UpdateProgressService
   def suppliers_match
     if @params[:copy_vendors_to_suppliers] == true
       # Logic to copy vendors to suppliers here
-    elsif @params[:skip_step] == true
+    elsif ActiveModel::Type::Boolean.new.cast(@params[:skip_step]) == true
       if @step.skippable?
         skip_step
       else
@@ -168,7 +168,7 @@ class UpdateProgressService
     if @params[:bundles_file]
       # Handle bundles file upload logic here
       # We can use background jobs for this if we don't want to block the UI
-    elsif @params[:skip_step] == true
+    elsif ActiveModel::Type::Boolean.new.cast(@params[:skip_step]) == true
       if @step.skippable?
         skip_step
       else

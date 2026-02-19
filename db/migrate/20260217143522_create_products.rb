@@ -8,7 +8,7 @@ class CreateProducts < ActiveRecord::Migration[8.1]
       t.decimal :price
       t.integer :lead_time
       t.references :category, null: false, foreign_key: true
-      t.references :supplier_id, foreign_key: { to_table: :vendors }
+      t.references :supplier, foreign_key: { to_table: :vendors }
 
       t.timestamps
     end

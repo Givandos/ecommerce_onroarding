@@ -74,11 +74,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_17_151213) do
     t.string "name"
     t.decimal "price"
     t.string "sku"
-    t.integer "supplier_id_id"
+    t.integer "supplier_id"
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["company_id"], name: "index_products_on_company_id"
-    t.index ["supplier_id_id"], name: "index_products_on_supplier_id_id"
+    t.index ["supplier_id"], name: "index_products_on_supplier_id"
   end
 
   create_table "sales_histories", force: :cascade do |t|
@@ -129,7 +129,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_17_151213) do
   add_foreign_key "onboarding_progresses", "onboarding_steps", column: "current_step_id"
   add_foreign_key "products", "categories"
   add_foreign_key "products", "companies"
-  add_foreign_key "products", "vendors", column: "supplier_id_id"
+  add_foreign_key "products", "vendors", column: "supplier_id"
   add_foreign_key "sales_histories", "companies"
   add_foreign_key "sales_histories", "products"
   add_foreign_key "users", "companies"
